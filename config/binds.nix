@@ -28,6 +28,22 @@
       (util.mkKMexpr "n" "N" "'nN'[v:searchforward].'zv'" "Prev Search Result" true)
       (util.mkKMexpr "x" "N" "'nN'[v:searchforward]" "Prev Search Result" true)
       (util.mkKMexpr "o" "N" "'nN'[v:searchforward]" "Prev Search Result" true)
+      # Move to window using the <ctrl> hjkl keys
+      (util.mkKeymap "n" "<C-h>" "<C-w>h" "Go to Left Window")
+      (util.mkKeymap "n" "<C-j>" "<C-w>j" "Go to Lower Window")
+      (util.mkKeymap "n" "<C-k>" "<C-w>k" "Go to Upper Window")
+      (util.mkKeymap "n" "<C-l>" "<C-w>l" "Go to Right Window")
+      # Resize window using <ctrl> arrow keys
+      (util.mkKeymap "n" "<C-Up>" "<cmd>resize +2<cr>" "Increase Window Height")
+      (util.mkKeymap "n" "<C-Down>" "<cmd>resize -2<cr>" "Decrease Window Height")
+      (util.mkKeymap "n" "<C-Left>" "<cmd>vertical resize +2<cr>" "Increase Window Width")
+      (util.mkKeymap "n" "<C-Right>" "<cmd>vertical resize -2<cr>" "Decrease Window width")
+      # Flash.vim
+      # NOTE: This is a very powerful easy-motion tool🚀
+      (util.mkLuaKeymap ["n" "x" "o"] "s" ''function() require("flash").jump() end'' "Flash")
+      (util.mkLuaKeymap ["n" "o" "x"] "S" ''function() require("flash").treesitter() end'' "Flash treesitter")
+      (util.mkLuaKeymap "o" "r" ''function() require("flash").remote() end'' "Remote Flash")
+      (util.mkLuaKeymap ["o" "x"] "R" ''function() require("flash").treesitter_search() end'' "Treesitter Search")
       # Clear search
       (util.mkLuaKMexpr ["i" "n" "s"] "<esc>" ''        function()
           vim.cmd("noh") return "<esc>" end'' "Escape and Clear hlsearch"

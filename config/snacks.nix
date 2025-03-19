@@ -8,19 +8,22 @@
           explorer = {enabled = true;};
           bigfile = {enabled = true;};
           indent = {enabled = true;};
+          image = {enabled = true;};
           # dashboard = {enabled = true;};
         };
       };
-      images = {
-        image-nvim = {
-          enable = true;
-          setupOpts = {
-            integrations = {
-              markdown.enable = true;
-            };
-          };
-        };
-      };
+      vim-wakatime.enable = true;
+      # Use snacks image so this is no needed.
+      # images = {
+      #   image-nvim = {
+      #     enable = true;
+      #     setupOpts = {
+      #       integrations = {
+      #         markdown.enable = true;
+      #       };
+      #     };
+      #   };
+      # };
       preview.markdownPreview = {
         enable = true;
       };

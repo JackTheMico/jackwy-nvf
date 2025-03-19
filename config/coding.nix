@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   vim = {
     autopairs.nvim-autopairs.enable = true;
+    debugger.nvim-dap = {
+      enable = true;
+    };
     notes = {
       todo-comments.enable = true;
     };
@@ -11,10 +14,19 @@
         enable = true;
       };
     };
-    lazy.plugins = {
+    lazy.plugins = with pkgs.vimPlugins; {
       "guess-indent.nvim" = {
-        package = pkgs.vimPlugins.guess-indent-nvim;
+        package = guess-indent-nvim;
         setupModule = "guess-indent";
+        setupOpts = {
+          option_name = true;
+        };
+        lazy = true;
+        event = ["BufEnter"];
+      };
+      "flash.nvim" = {
+        package = flash-nvim;
+        setupModule = "flash";
         setupOpts = {
           option_name = true;
         };

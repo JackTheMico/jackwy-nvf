@@ -27,6 +27,8 @@
     notify = {
       nvim-notify.enable = true;
     };
-    dashboard.dashboard-nvim.enable = true;
+    dashboard.alpha = {
+      enable = true;
+    };
   };
 }

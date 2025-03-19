@@ -3,10 +3,8 @@
     conform-nvim = {
       enable = true;
       setupOpts = {
-        format_on_save = {
+        format_after_save = {
           lsp_format = "fallback";
-          timeout_ms = 500;
-          async = true;
         };
         formatters_by_ft = let
           mkFormatter = formatters: (lib.attrsets.listToAttrs (map (f: lib.attrsets.nameValuePair "@${f}" f) formatters)) // {stop_after_first = true;};
