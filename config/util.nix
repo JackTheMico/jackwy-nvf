@@ -1,5 +1,14 @@
 {
-  mkKeymap = mode: key: action: desc: {
+  mkKMexpr = mode: key: action: desc: expr:  {
+    inherit
+      mode
+      key
+      action
+      desc
+      expr
+      ;
+  };
+  mkKeymap = mode: key: action: desc:  {
     inherit
       mode
       key
@@ -20,6 +29,16 @@
       key
       action
       desc
+      ;
+    lua = true;
+  };
+  mkLuaKMexpr = mode: key: action: desc: expr: {
+    inherit
+      mode
+      key
+      action
+      desc
+      expr
       ;
     lua = true;
   };

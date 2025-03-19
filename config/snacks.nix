@@ -1,4 +1,4 @@
-{lib, ...}: {
+{
   vim = {
     utility = {
       snacks-nvim = {
@@ -10,6 +10,19 @@
           indent = {enabled = true;};
           # dashboard = {enabled = true;};
         };
+      };
+      images = {
+        image-nvim = {
+          enable = true;
+          setupOpts = {
+            integrations = {
+              markdown.enable = true;
+            };
+          };
+        };
+      };
+      preview.markdownPreview = {
+        enable = true;
       };
     };
   };

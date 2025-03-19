@@ -3,11 +3,10 @@
     ./binds.nix
     ./blink.nix
     ./coding.nix
-    ./formatter.nix
-    ./languages.nix
+    ./lang-lsp
+    ./snippets
     ./options.nix
     ./snacks.nix
-    ./treesitter.nix
     ./ui.nix
   ];
 

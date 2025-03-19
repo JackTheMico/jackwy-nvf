@@ -1,4 +1,4 @@
-{lib, colorScheme, ...}: {
+{colorScheme, ...}: {
   vim = {
     statusline.lualine = {
       enable = true;
@@ -23,6 +23,9 @@
         lsp-signature.enable = true;
         fastaction.enable = true;
       };
+    };
+    notify = {
+      nvim-notify.enable = true;
     };
     dashboard.dashboard-nvim.enable = true;
   };
