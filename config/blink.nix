@@ -3,6 +3,8 @@
     enable = true;
     friendly-snippets.enable = true;
     setupOpts = {
+      # cmdline.keymap.preset = "none";
+      cmdline.completion.menu.auto_show = true;
       signature.enabled = true;
     };
     sourcePlugins = {
