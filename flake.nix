@@ -43,17 +43,5 @@
         ];
       };
     });
-    nixosConfigurations = {
-      nixos-jackwy-desktop = nixpkgs.lib.nixosSystem {
-        modules = [
-          # This will make wrapped neovim available in your system packages
-          # Can also move this to another config file if you pass inputs/self around with specialArgs
-          ({pkgs, ...}: {
-            environment.systemPackages = [self.packages.${pkgs.stdenv.system}.neovim];
-          })
-        ];
-        # ...
-      };
-    };
   };
 }
