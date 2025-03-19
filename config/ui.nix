@@ -4,6 +4,8 @@
       enable = true;
       theme = colorScheme;
     };
+    # Whether to enable automatically highlight other uses of the word under the cursor [vim-illuminate] .
+    illuminate.enable = true;
     tabline.nvimBufferline.enable = true;
     theme = {
       enable = true;
