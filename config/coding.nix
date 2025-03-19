@@ -9,6 +9,12 @@
       enable = true;
       ui.enable = true;
     };
+    session.nvim-session-manager = {
+      enable = true;
+      setupOpts = {
+        autoload_mode = "CurrentDir";
+      };
+    };
     comments.comment-nvim = {
       enable = true;
       setupOpts = {
