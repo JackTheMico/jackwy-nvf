@@ -9,9 +9,9 @@
         formatters_by_ft = let
           mkFormatter = formatters: (lib.attrsets.listToAttrs (map (f: lib.attrsets.nameValuePair "@${f}" f) formatters)) // {stop_after_first = true;};
         in {
-          haskell = mkFormatter [
-            "ormolu"
-          ];
+          # haskell = mkFormatter [
+          #   "ormolu"
+          # ];
           html = mkFormatter [
             "prettierd"
             "prettier"
