@@ -5,7 +5,6 @@
       theme = colorScheme;
     };
     # Whether to enable automatically highlight other uses of the word under the cursor [vim-illuminate] .
-    illuminate.enable = true;
     tabline.nvimBufferline.enable = true;
     theme = {
       enable = true;
@@ -16,14 +15,17 @@
       nvim-web-devicons.enable = true;
       rainbow-delimiters.enable = true;
     };
-    ui.borders = {
-      enable = true;
-      globalStyle = "rounded";
-      plugins = {
-        which-key.enable = true;
-        lspsaga.enable = true;
-        lsp-signature.enable = true;
-        fastaction.enable = true;
+    ui = {
+      illuminate.enable = true;
+      borders = {
+        enable = true;
+        globalStyle = "rounded";
+        plugins = {
+          which-key.enable = true;
+          lspsaga.enable = true;
+          lsp-signature.enable = true;
+          fastaction.enable = true;
+        };
       };
     };
     notify = {
