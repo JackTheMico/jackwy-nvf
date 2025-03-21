@@ -4,8 +4,24 @@
       enable = true;
       theme = colorScheme;
     };
-    # Whether to enable automatically highlight other uses of the word under the cursor [vim-illuminate] .
-    tabline.nvimBufferline.enable = true;
+    tabline.nvimBufferline = {
+      enable = true;
+      mappings = {
+        closeCurrent = "<leader>bd";
+        cycleNext = "<S-l>";
+        cyclePrevious = "<S-h>";
+      };
+      setupOpts = {
+        options = {
+          show_close_icon = false;
+          separator_style = "padded_slope";
+          indicator = {
+            icon = "🚀";
+            style = "icon";
+          };
+        };
+      };
+    };
     theme = {
       enable = true;
       name = colorScheme;
@@ -16,7 +32,9 @@
       rainbow-delimiters.enable = true;
     };
     ui = {
+      # Whether to enable automatically highlight other uses of the word under the cursor [vim-illuminate] .
       illuminate.enable = true;
+      smartcolumn.enable = true;
       borders = {
         enable = true;
         globalStyle = "rounded";

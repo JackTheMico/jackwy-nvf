@@ -19,9 +19,9 @@
       # New File
       (util.mkKeymap "n" "<leader>fn" "<cmd>enew<cr>" "New File")
       # Buffers
-      (util.mkKeymap "n" "<S-h>" "<cmd>bprevious<cr>" "Prev Buffer")
-      (util.mkKeymap "n" "<S-l>" "<cmd>bnext<cr>" "Next Buffer")
-      (util.mkLuaKeymap "n" "<leader>bd" ''function() Snacks.bufdelete() end'' "Delete Buffer")
+      # (util.mkKeymap "n" "<S-h>" "<cmd>bprevious<cr>" "Prev Buffer")
+      # (util.mkKeymap "n" "<S-l>" "<cmd>bnext<cr>" "Next Buffer")
+      # (util.mkLuaKeymap "n" "<leader>bd" ''function() Snacks.bufdelete() end'' "Delete Buffer")
       (util.mkLuaKeymap "n" "<leader>bo" ''function() Snacks.bufdelete.other() end'' "Delete Other Buffer")
       (util.mkKeymap "n" "<leader>bD" ":bd<cr>" "Delete Buffer and Window")
       # lazygit
