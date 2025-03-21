@@ -28,9 +28,9 @@
         };
       };
     };
-    notify = {
-      nvim-notify.enable = true;
-    };
+    # notify = {
+    #   nvim-notify.enable = true;
+    # };
     dashboard.alpha = {
       enable = true;
     };

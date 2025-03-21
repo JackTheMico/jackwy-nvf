@@ -1,6 +1,9 @@
 {
   vim = {
     useSystemClipboard = true;
+    extraLuaFiles = [
+      ./lua/debug.lua
+    ];
     options = {
       # 2-space indents
       tabstop = 2;

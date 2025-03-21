@@ -7,8 +7,14 @@
           picker = {enabled = true;};
           explorer = {enabled = true;};
           bigfile = {enabled = true;};
+          debug = {enabled = true;};
           indent = {enabled = true;};
           image = {enabled = true;};
+          notifier = {enabled = true;};
+          scratch = {enabled = true;};
+          statuscolumn = {enabled = false;};
+          quickfile = {enabled = true;};
+          zen = {enabled = true;};
           # dashboard = {enabled = true;};
         };
       };

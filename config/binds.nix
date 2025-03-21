@@ -16,11 +16,28 @@
       (util.mkKeymap "n" "<leader>fg" ":lua Snacks.picker.git_files()<cr>" "Find Git Files")
       (util.mkKeymap "n" "<leader>fp" ":lua Snacks.picker.projects()<cr>" "Projects")
       (util.mkKeymap "n" "<leader>fr" ":lua Snacks.picker.recent()<cr>" "Recent Files")
-      # Other
+      # New File
+      (util.mkKeymap "n" "<leader>fn" "<cmd>enew<cr>" "New File")
+      # Buffers
+      (util.mkKeymap "n" "<S-h>" "<cmd>bprevious<cr>" "Prev Buffer")
+      (util.mkKeymap "n" "<S-l>" "<cmd>bnext<cr>" "Next Buffer")
+      (util.mkLuaKeymap "n" "<leader>bd" ''function() Snacks.bufdelete() end'' "Delete Buffer")
+      (util.mkLuaKeymap "n" "<leader>bo" ''function() Snacks.bufdelete.other() end'' "Delete Other Buffer")
+      (util.mkKeymap "n" "<leader>bD" ":bd<cr>" "Delete Buffer and Window")
+      # lazygit
       (util.mkKeymap "n" "<leader>gg" ":lua Snacks.lazygit()<cr>" "Lazygit")
+      (util.mkKeymap "n" "<leader>gf" ":lua Snacks.picker.git_log_file()<cr>" "Git Current File History")
+      (util.mkKeymap "n" "<leader>gl" ":lua Snacks.picker.git_log()<cr>" "Git Log (cwd)")
+      (util.mkKeymap "n" "<leader>gb" ":lua Snacks.picker.git_log_line()<cr>" "Git Blame Line")
+      (util.mkKeymap "n" "<leader>gB" ":lua Snacks.gitbrowse()<cr>" "Git Browse (open)")
+      # Scratch
+      (util.mkLuaKeymap "n" "<leader>." "function() Snacks.scratch() end" "Toggle Scratch Buffer")
+      (util.mkLuaKeymap "n" "<leader>S" "function() Snacks.scratch.select() end" "Select Scratch Buffer")
+      # Other
+      (util.mkLuaKeymap "n" "<leader>uz" "function() Snacks.zen() end" "Zen Mode")
       (util.mkKeymap "n" "<leader>qq" ":qa<cr>" "Quit All")
-      (util.mkKeymap "n" "<leader>q" ":lua Snacks.lazygit()<cr>" "Lazygit")
-      (util.mkKeymap "n" "<c-/>" ":lua Snacks.terminal()<cr>" "Toggle Terminal")
+      # terminal
+      (util.mkKeymap "n" "<c-/>" ":lua Snacks.terminal()<cr>" "Terminal (cwd)")
       # https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
       (util.mkKMexpr "n" "n" "'Nn'[v:searchforward].'zv'" "Next Search Result" true)
       (util.mkKMexpr "x" "n" "'Nn'[v:searchforward]" "Next Search Result" true)
