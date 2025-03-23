@@ -6,7 +6,8 @@
     };
     keymaps = [
       # Top Pickers & Explorer
-      (util.mkKeymap "n" "<leader>e" ":lua Snacks.explorer()<cr>" "File Explorer")
+      (util.mkKeymap "n" "<leader>E" ":lua Snacks.explorer()<cr>" "File Explorer")
+      (util.mkKeymap "n" "<leader>e" ":lua MiniFiles.open()<cr>" "Mini Files")
       (util.mkKeymap "n" "<leader><space>" ":lua Snacks.picker.smart()<cr>" "Smart Find Files")
       (util.mkKeymap "n" "<leader>," ":lua Snacks.picker.buffers()<cr>" "Buffers")
       (util.mkKeymap "n" "<leader>/" ":lua Snacks.picker.grep()<cr>" "Grep")
