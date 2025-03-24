@@ -35,12 +35,15 @@
           python = mkFormatter [
             "ruff"
           ];
+          yaml = mkFormatter [
+            "yamlfmt"
+          ];
           lua = mkFormatter [
             "stylua"
           ];
           nix = mkFormatter [
-            "nixfmt"
             "alejandra"
+            "nixfmt"
           ];
           markdown = mkFormatter [
             "prettierd"

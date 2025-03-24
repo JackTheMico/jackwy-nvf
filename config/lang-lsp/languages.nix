@@ -25,6 +25,11 @@
       lsp.enable = true;
       treesitter.enable = true;
     };
+    yaml = {
+      enable = true;
+      lsp.enable = true;
+      treesitter.enable = true;
+    };
     tailwind.enable = true;
     ts.enable = true;
     nix = {
