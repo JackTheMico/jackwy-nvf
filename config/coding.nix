@@ -4,6 +4,16 @@
   ...
 }: {
   vim = {
+    assistant.codecompanion-nvim = {
+      enable = true;
+      setupOpts = {
+        display = {
+          chat = {
+            auto_scroll = true;
+          };
+        };
+      };
+    };
     autopairs.nvim-autopairs.enable = true;
     debugger.nvim-dap = {
       enable = true;
@@ -11,9 +21,7 @@
     };
     session.nvim-session-manager = {
       enable = true;
-      setupOpts = {
-        autoload_mode = "CurrentDir";
-      };
+      setupOpts = {autoload_mode = "CurrentDir";};
     };
     comments.comment-nvim = {
       enable = true;
