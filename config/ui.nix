@@ -33,7 +33,7 @@
     };
     ui = {
       # Whether to enable automatically highlight other uses of the word under the cursor [vim-illuminate] .
-      illuminate.enable = false;
+      illuminate.enable = true;
       smartcolumn.enable = true;
       borders = {
         enable = true;
