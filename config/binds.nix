@@ -51,6 +51,7 @@
       (util.mkLuaKeymap "n" "<leader>." "function() Snacks.scratch() end" "Toggle Scratch Buffer")
       (util.mkLuaKeymap "n" "<leader>S" "function() Snacks.scratch.select() end" "Select Scratch Buffer")
       # Other
+      (util.mkLuaKeymap "n" "<leader>uc" "function() Snacks.picker.colorschemes() end" "Zen Mode")
       (util.mkLuaKeymap "n" "<leader>uz" "function() Snacks.zen() end" "Zen Mode")
       (util.mkKeymap "n" "<leader>qq" ":qa<cr>" "Quit All")
       # terminal

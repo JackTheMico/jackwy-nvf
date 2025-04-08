@@ -1,5 +1,19 @@
-{colorScheme, ...}: {
+{
+  colorScheme,
+  pkgs,
+  ...
+}: {
   vim = {
+    extraPlugins = with pkgs.vimPlugins; {
+      catppuccin = {
+        package = catppuccin-nvim;
+        setup = "require('catppuccin').setup {}";
+      };
+      tokyonight = {
+        package = tokyonight-nvim;
+        setup = "require('tokyonight').setup {}";
+      };
+    };
     statusline.lualine = {
       enable = true;
       theme = colorScheme;

@@ -1,12 +1,24 @@
 {
   pkgs,
   util,
+  lib,
   ...
-}: {
+}: let
+  inherit (lib.generators) mkLuaInline;
+in {
   vim = {
     assistant.codecompanion-nvim = {
       enable = true;
       setupOpts = {
+        #FIXME: figure out how to setup this.
+        strategies = {
+          chat = {
+            adapter = "deepseek";
+          };
+          inline = {
+            adapter = "deepseek";
+          };
+        };
         display = {
           chat = {
             auto_scroll = true;
