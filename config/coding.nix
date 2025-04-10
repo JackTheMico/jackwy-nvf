@@ -1,27 +1,52 @@
 {
   pkgs,
   util,
-  lib,
+  # lib,
   ...
-}: let
-  inherit (lib.generators) mkLuaInline;
-in {
+}:
+# let
+#   inherit (lib.generators) mkLuaInline;
+# in
+{
   vim = {
-    assistant.codecompanion-nvim = {
-      enable = true;
-      setupOpts = {
-        #FIXME: figure out how to setup this.
-        strategies = {
-          chat = {
-            adapter = "deepseek";
+    assistant = {
+      copilot = {
+        enable = true;
+        cmp.enable = true;
+      };
+      codecompanion-nvim = {
+        enable = true;
+        setupOpts = {
+          # NOTE: I need to top up for using this.
+          # adapters =
+          #   mkLuaInline
+          #   /*
+          #   lua
+          #   */
+          #   ''
+          #     {
+          #       deepseek = function()
+          #         return require("codecompanion.adapters").extend("deepseek", {
+          #           env = {
+          #             api_key = "cmd: cat ~/.config/nvf/deepseek_apikey",
+          #           },
+          #         })
+          #       end,
+          #     }
+          #   '';
+          strategies = {
+            chat = {
+              adapter = "copilot";
+            };
+            inline = {
+              adapter = "copilot";
+            };
           };
-          inline = {
-            adapter = "deepseek";
-          };
-        };
-        display = {
-          chat = {
-            auto_scroll = true;
+          display = {
+            chat = {
+              auto_scroll = true;
+              show_settings = true;
+            };
           };
         };
       };
@@ -73,7 +98,6 @@ in {
         lazy = true;
         event = ["BufEnter"];
       };
-
       "overseer.nvim" = {
         package = overseer-nvim;
         setupModule = "overseer";
